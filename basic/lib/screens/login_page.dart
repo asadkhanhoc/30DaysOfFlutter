@@ -1,3 +1,4 @@
+import 'package:basic/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,7 +7,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Colors.white,
+      color: Colors.white,
+      child: SingleChildScrollView(
         child: Column(
           children: [
             Image.asset(
@@ -16,7 +18,7 @@ class LoginPage extends StatelessWidget {
             const Text(
               "Welcome...",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -47,8 +49,14 @@ class LoginPage extends StatelessWidget {
                     height: 50,
                   ),
                   FilledButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        MyRoutes.homeRoute,
+                      );
+                    },
                     style: TextButton.styleFrom(
+                      minimumSize: const Size(120, 40),
                       elevation: 40,
                       backgroundColor: Colors.blueAccent,
                       shape: const BeveledRectangleBorder(
@@ -63,6 +71,8 @@ class LoginPage extends StatelessWidget {
               ),
             )
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
