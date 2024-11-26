@@ -9,8 +9,8 @@ class HomePage extends StatelessWidget {
     String name = "Asad";
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        foregroundColor: Colors.white,
+        // backgroundColor: Colors.blueAccent,
+        // foregroundColor: Colors.white,
         title: const Text("First"),
       ),
       body: Center(
